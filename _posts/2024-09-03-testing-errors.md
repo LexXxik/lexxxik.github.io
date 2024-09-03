@@ -21,7 +21,7 @@ In this post I will introduce funadmentals for classsification. I will discuss t
 Most of us witnessed COVID-19 pandemic and had a chance to undergo a COVID-19 test. One question that might arise is how good were these tests? 
 
 To start of imagine a population of people. Then we can sort them into two groups: those that have covid (positive), and those that do not have covid (negative) (see Figure 1). I will call this: sorting by disease status.
-![Desktop View](/blog_images/Disease_status.png){: width="972" height="589" }
+![Desktop View](./blog_images/Disease_status.png){: width="972" height="589" }
 _Figure 1: dividing population by disease status._
 
 ## Testing
@@ -30,7 +30,7 @@ However, once the testing is introduce, there is a chance of miscategorizing peo
 
 Alternativelly, a person does not have covid, but the testing concludes that he does. We call this case false positive. 
 
-![Desktop View](/blog_images/Disease_testing.png){: width="972" height="589" }
+![Desktop View](./blog_images/Disease_testing.png){: width="972" height="589" }
 _Figure 2: testing population and categorizing as positve, or negative test resutlt._
 
 Therefore, instead of two categories, as in sorting by disease status we end up with four: true positive, true negative, false positive, false negative. True, or false indicates whether disease status matches the test result. Meanwhile positve, or negative indicates test result **NOT** disease status.
@@ -39,7 +39,7 @@ If testing categorizes person correctly he is true positive, or true negative ba
 
 These four cases can be neatly summarized in **confusion matrix** (see Figure 3).
 
-![Desktop View](/blog_images/Summary_test_disease.png){: width="972" height="589" }
+![Desktop View](./blog_images/Summary_test_disease.png){: width="972" height="589" }
 _Figure 3: summarizing results of the test. Positive, or negative is the result of the test. False, true indicates whether test result aligns with disease status._
 
 ## Implementation of confusion matrix
