@@ -38,7 +38,8 @@ temperature = [10, 12, 15.7, 18.9, 13, 10.5]
 
 On the other hand, there is qualitative data. These could be drink types: "spirit," "beer," "soft drink," or satisfaction levels: "dissatisfied," "neutral," "satisfied." Qualitative data usually have two or more categories.
 
-Have you noticed something peculiar about the examples of qualitative data?
+> Have you noticed something peculiar about the examples of qualitative data?
+{: .prompt-tip }
 
 There is a further distinction within qualitative data: **ordinal** and **nominal**. Ordinal data have a natural ordering, such as satisfaction ratings. In other words, the categories can be ORDERED, in this case from "dissatisfied" to "satisfied." Nominal data are just labels without natural ordering: "beer," "spirit," "soft drink."
 
