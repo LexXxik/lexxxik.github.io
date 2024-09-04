@@ -1,6 +1,6 @@
 ---
 title: Testing & errors
-description: In this post, I describe errors that arise from testing and how they are organized in confusion matrix
+description: What errors arise from conductin a test? What is confusion matrix?
 author: LexXxik
 date: 2024-09-03 12:00:00 +0000
 categories: [testing_errors, categorization]
@@ -9,7 +9,7 @@ pin: true
 math: true
 mermaid: true
 comments: true
-pin: true
+pin: false
 future: true
 ---
 
@@ -23,7 +23,7 @@ Most of us witnessed the COVID-19 pandemic and had a chance to undergo a COVID-1
 
 To start off, imagine a population of people. Then we can sort them into two groups: those who have COVID (positive) and those who do not have COVID (negative) (see Figure 1). I will call this: sorting by disease status.
 
-![Figure 1](../blog_images/Disease_status.png)
+![Figure 1](../blog_images/2024-09-03/Disease_status.png)
 _Figure 1: dividing the population by disease status._
 
 ## Testing
@@ -32,7 +32,7 @@ However, once testing is introduced, there is a chance of miscategorizing people
 
 Alternatively, a person does not have COVID, but the test concludes that they do. We call this case a false positive.
 
-![Figure 2](../blog_images/Disease_testing.png)
+![Figure 2](../blog_images/2024-09-03/Disease_testing.png)
 _Figure 2: testing the population and categorizing as positive or negative test results._
 
 Therefore, instead of two categories, as in sorting by disease status, we end up with four: true positive, true negative, false positive, and false negative. True or false indicates whether the disease status matches the test result. Meanwhile, positive or negative indicates the test result, **NOT** the disease status.
@@ -41,7 +41,7 @@ If the test categorizes a person correctly, they are true positive or true negat
 
 These four cases can be neatly summarized in a **confusion matrix** (see Figure 3).
 
-![Figure 3](../blog_images/Summary_test_disease.png)
+![Figure 3](../blog_images/2024-09-03/Summary_test_disease.png)
 _Figure 3: summarizing results of the test. Positive or negative is the result of the test. False or true indicates whether the test result aligns with disease status._
 
 ## Implementation of Confusion Matrix
