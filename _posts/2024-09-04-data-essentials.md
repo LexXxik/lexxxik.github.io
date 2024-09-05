@@ -1,6 +1,6 @@
 ---
 title: Data and its representations
-description: some description
+description: What is data? What is the best way to arrange it?
 author: LexXxik
 date: 2024-09-04 12:00:00 +0000
 categories: [data, fundamentals, python, pandas]

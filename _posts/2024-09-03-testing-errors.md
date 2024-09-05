@@ -1,6 +1,6 @@
 ---
 title: Testing & errors
-description: What errors arise from conductin a test? What is confusion matrix?
+description: What errors arise from conducting a test? What is confusion matrix?
 author: LexXxik
 date: 2024-09-03 12:00:00 +0000
 categories: [testing_errors, categorization]
