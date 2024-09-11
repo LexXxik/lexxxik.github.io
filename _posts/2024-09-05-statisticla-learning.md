@@ -1,6 +1,6 @@
 ---
 title: Statistical learning
-description: How are techniques in data science divided?
+description: We will discuss the difference between supervised and unsupervised learning. Furthermore, we will introduce notion of indpendent, and dependent variable for supervised learning.
 author: LexXxik
 date: 2024-09-05 12:00:00 +0000
 categories: [fundamentals, statistical_learning, supervised, unsupervised]
@@ -14,7 +14,7 @@ future: true
 ---
 
 # Brief
-In this article, we look at the main distinction between statistical techniques in data science, namely, supervised and unsupervised learning.
+In this article, we look at the main distinction between statistical techniques in data science, namely, supervised and unsupervised learning. We also look at how can be statistical learning summarized by an equation.
 
 # Statistical Learning
 
@@ -38,9 +38,21 @@ Instead of visualizing the data and choosing independent and dependent variables
 
 ## Supervised Learning
 
-Supervised learning is a set of statistical techniques that separate variables into dependent and independent variables and choose a statistical model to make predictions. The essential point is that there is a variable that is being predicted and a model of the relationship that is being assumed.
+Supervised learning is a set of statistical techniques that separate variables into dependent and independent variables and choose a statistical model to make predictions. The essential point is that there is a variable that is being predicted and a model of the relationship that is being assumed. It is summarized by following equation:
 
-Examples of these statistical techniques include **regression** and **classification problems**. In a regression problem, the dependent (predicted) variable is quantitative, such as temperature. In classification problems, it is qualitative, such as categorizing images into cats and dogs.  
+$$Y = f(X)+\epsilon ,$$
+
+- $Y$ is the dependent variable, or variables which is being predicted
+- $X$ are independent variables, or predictors
+- $f$ is statistical model
+- $\epsilon$ is error term
+
+Overall, the equation sais that each observation of dependent variable $Y$ equals to the value of our statistical model evaluated at independent variables $X$ associated with value $Y$ plus some error term $\epsilon$. We can use statistical model to make prediction about value $Y$:
+
+$$\hat{Y} = f(X),$$
+where $\hat{ }$ means that we are estimating $Y$.
+
+Examples of supervised learning include **regression**, **classification**, **neural networks**, etc. In a regression problem, the dependent (predicted) variable is quantitative, such as temperature. In classification problems, it is qualitative, such as categorizing images into cats and dogs.  
 
 ## Unsupervised Learning
 
