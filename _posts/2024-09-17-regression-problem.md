@@ -1,6 +1,6 @@
 ---
 title: Regression problem (Linear reg. & K-nearest-neighbor)
-description: We will discuss the difference between supervised and unsupervised learning. Furthermore, we will introduce notion of indpendent, and dependent variable for supervised learning.
+description: I introduce regression problem and two simple statistical learning methods to tackle it. These are simple linear regression, parametric model, and K-nearest-neighbor algorithm, non-parametric model. 
 author: LexXxik
 date: 2024-09-17 12:00:00 +0000
 categories: [fundamentals, supervised, k-nearest-neighbor, linear_regression]
@@ -37,6 +37,7 @@ The advantage of the parametric approach is that it is usually **straightforward
 For simple linear regression, assume that there is one independent and one dependent variable. In particular, the statistical model takes the form:
 
 $$f(X) = \beta_0 + \beta_1 X,$$
+
 where $\beta_0$ is called the **intercept**, and $\beta_1$ is called the **slope**. Both of these coefficients have to be estimated from the data.
 
 To that end, we minimize the **Residual Sum of Squares** given by:
@@ -48,6 +49,7 @@ assuming that the data points are $(y_1, X_1), \; \ldots , (y_n, X_n)$. For mini
 $$
 \frac{d\;\text{RSS}}{d\;\beta_0} = 0,
 $$
+
 $$
 \frac{d\;\text{RSS}}{d\;\beta_1} = 0,
 $$
