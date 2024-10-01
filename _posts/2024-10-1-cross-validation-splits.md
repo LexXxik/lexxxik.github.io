@@ -2,7 +2,7 @@
 title: Train-test-validation split, cross-validation
 description: Concept of train-test-validation split is discussed to improve model performance. In addition, a related concept of cross-validation is discussed.
 author: LexXxik
-date: 2024-20-14 12:00:00 +0000
+date: 2024-10-1 12:00:00 +0000
 categories: [fundamentals, supervised, train-test-validatation_split, cross-validation]
 tags: [splits]
 pin: false
