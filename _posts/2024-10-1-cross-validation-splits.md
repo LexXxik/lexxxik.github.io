@@ -89,7 +89,7 @@ To prevent **overfitting to validation set**, we follow the procedure illustated
 - At each step calculate model's MSE on the validation set.
 - Finally choose the model which has the lowest average MSE across folds of cross-validation and test it on testing set.
 
-![Figure 4](../blog_images/2024-10-1/favoring-dataset.png)
+![Figure 4](../blog_images/2024-10-1/cross-validation.png)
 _Figure 4: cross-validation on different folds selected from training dataset at each step._
 
 However, a drawback of cross-validation is that it is computationally expensive.
