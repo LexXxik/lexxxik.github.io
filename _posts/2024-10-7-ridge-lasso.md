@@ -26,16 +26,16 @@ $$
 assuming $J$ predictors and coefficents $\beta_0, \beta_1, \ldots , \beta_J$. To perform regularization the following **loss function** is minimized (in the same way as RSS was minimized):
 
 $$
-L(\beta) = \text{RSS} + \lambda \text_{L}_{reg}
+L(\beta) = \text{RSS} + \lambda \text{L}_{reg}
 $$
 
-where $\lambda$ is a hyperparameter to be chosen and $\text_{L}_{reg}$ is the term that depends on specific regularization.
+where $\lambda$ is a hyperparameter to be chosen and $\text{L}_{reg}$ is the term that depends on specific regularization.
 
 ## Ridge regularization
 In the case of ridge regularization the last term is given as follows:
 
 $$
-\text_{L}_{reg} = \sum_{j=1}^J \beta_j^2 .
+\text{L}_{reg} = \sum_{j=1}^J \beta_j^2 .
 $$
 
 It is straight forward to minimize resulting function by equaling the derivative to 0 and rearrangin for $\beta $s. Because analytic solution is available, ridge regularization is fast to compute relative to Lasso. However, ridge regularization does not preform selection of predictors.
@@ -54,7 +54,7 @@ clf.fit(X, y)
 This regularization has
 
 $$
-\text_{L}_{reg} = \sum_{j=1}^J | \beta_j | .
+\text{L}_{reg} = \sum_{j=1}^J | \beta_j | .
 $$
 
 Because of appearence of absolute value, there is no derivative at $\beta_j$ at 0 and so no analytical expression. Instead the parameters $\beta_j$ have to be estimated with iterative numerical methods. This makes Lasso regularization slower to compute, but it performs variable selection in contrast to Ridge regression. Hence, it is a regulazation of choice to many data scientists. 
