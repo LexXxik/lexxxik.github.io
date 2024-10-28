@@ -78,7 +78,7 @@ $$
 L(p | Y) = \prod_{i} L(p_i | Y) = \prod_{i} p_i^{y_i} (1-p_i)^{1-y_i}.
 $$
 
-To this end we would have to calculate derivative of $L(p | Y)$ which would require to apply product rule repeatedly. Hence, it is beneficial to introduce a **log-likelihood** 
+To this end we would have to calculate the derivative of $L(p | Y)$ which would require to apply product rule repeatedly. Hence, it is beneficial to introduce a **log-likelihood** 
 
 $$
 l(p | Y) = - \ln (L(p | Y)) = - \sum_{i} \ln(p_i^{y_i} (1-p_i)^{1-y_i}) = - \sum_{i} y_i\ln(p_i) +  (1-y_i)\ln(1-p_i) 
@@ -109,6 +109,7 @@ and
 $$
 \frac{d \;p_i}{d\; \beta_m} = \frac{1}{(1+e^{-(\beta_0+\beta_1 x_i)})^2}e^{-(\beta_0 + \beta_1 x_i)}x_{i,m} = p_i(1-p_i)x_{i,m},
 $$
+
 where $x_{i,m} = 1$ if $m=0$ and $x_{i,m} = x_i$ otherwise. Hence, 
 
 $$
@@ -119,22 +120,22 @@ However, this cannot be rearranged to obtain analytical expression for $\beta_0,
 
 ## Gradient Descent
 
-To find approximation of $\beta_0, \beta_1$ we resort to a technique called gradient descent. Assume a function $F(\bm x)$ that describes a hyper-surface where $\bm x$ is a point of vector space. Now, consider $\nabla F(\bm x)$, a gradient of $F(\bm x)$, it gives the direction of fastest growth of $F(\bm x)$. Hence, $-\nabla F(x)$ gives a direction of **fastest descent**.
+To find approximation of $\beta_0, \beta_1$ we resort to a technique called gradient descent. Assume a function $F(\boldmath x)$ that describes a hyper-surface where $\boldmath x$ is a point of vector space. Now, consider $\nabla F(\boldmath x)$, a gradient of $F(\boldmath x)$, it gives the direction of fastest growth of $F(\boldmath x)$. Hence, $-\nabla F(x)$ gives a direction of **fastest descent**.
 
-Therefore, we can define a sequence $\{ \bm x_n \}_{n=0}^N$ such that
+Therefore, we can define a sequence $\{ \boldmath x_n \}_{n=0}^N$ such that
 
 $$
-\bm x_{n+1} = \bm x_n - \gamma \nabla F(\bm x_n),
+\boldmath x_{n+1} = \boldmath x_n - \gamma \nabla F(\boldmath x_n),
 $$
 
 where $\gamma$ is the step size and $N$ is the maximum number of steps. 
 
 ## Estimating parameters of Logistic regression
 
-Ofcouse, for our purposes we consider $\bm \beta = (\beta_0, \beta_1)$ with $Loss (p | Y)$. Then consider a sequence of vectors $\{ \bm \beta_n \}_{n=0}^N$ where $N$ is a maximum number of steps and with an intial guess $\bm \beta_0$ such that
+Ofcouse, for our purposes we consider $\boldmath \beta = (\beta_0, \beta_1)$ with $Loss (p | Y)$. Then consider a sequence of vectors $\{ \boldmath \beta_n \}_{n=0}^N$ where $N$ is a maximum number of steps and with an intial guess $\boldmath \beta_0$ such that
 
 $$
-\bm \beta_{n+1} = \bm \beta_n - \gamma \nabla Loss(p | Y),
+\boldmath \beta_{n+1} = \boldmath \beta_n - \gamma \nabla Loss(p | Y),
 $$
 where $\gamma$ is a step size. In particular, note that
 
