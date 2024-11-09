@@ -78,7 +78,7 @@ $$
 L(p | Y) = \prod_{i} L(p_i | Y) = \prod_{i} p_i^{y_i} (1-p_i)^{1-y_i}.
 $$
 
-To this end we have to calculate the derivative of $\prod_{i} L(p_i | Y)$ which would require to apply product rule repeatedly. Hence, it is beneficial to introduce a **log-likelihood** 
+To this end we have to calculate the derivative of $\prod_{i} L(p_i \vert Y)$ which would require to apply product rule repeatedly. Hence, it is beneficial to introduce a **log-likelihood** 
 
 $$
 l(p | Y) = - \ln (L(p | Y)) = - \sum_{i} \ln(p_i^{y_i} (1-p_i)^{1-y_i}) = - \sum_{i} y_i\ln(p_i) +  (1-y_i)\ln(1-p_i) 
@@ -132,7 +132,7 @@ where $\gamma$ is the step size and $N$ is the maximum number of steps.
 
 ## Estimating parameters of Logistic regression
 
-Ofcouse, for our purposes we consider $\overrightarrow{ \beta } = (\beta_0, \beta_1)$ with $Loss (p | Y)$. Then consider a sequence of vectors $\{ \overrightarrow{ \beta_n }\}_{n=0}^N$ where $N$ is a maximum number of steps and with an intial guess $\overrightarrow{ \beta_0 }$ such that
+Ofcouse, for our purposes we consider $\overrightarrow{ \beta } = (\beta_0, \beta_1)$ with $Loss (p \vert Y)$. Then consider a sequence of vectors $\{ \overrightarrow{ \beta_n }\}_{n=0}^N$ where $N$ is a maximum number of steps and with an intial guess $\overrightarrow{ \beta_0 }$ such that
 
 $$
 \overrightarrow{ \beta_{n+1}} = \overrightarrow{ \beta_n} - \gamma \nabla Loss(p | Y),
