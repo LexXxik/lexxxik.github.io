@@ -120,22 +120,22 @@ However, this cannot be rearranged to obtain analytical expression for $\beta_0,
 
 ## Gradient Descent
 
-To find approximation of $\beta_0, \beta_1$ we resort to a technique called gradient descent. Assume a function $F(\boldmath x)$ that describes a hyper-surface where $\boldmath x$ is a point of vector space. Now, consider $\nabla F(\boldmath x)$, a gradient of $F(\boldmath x)$, it gives the direction of fastest growth of $F(\boldmath x)$. Hence, $-\nabla F(x)$ gives a direction of **fastest descent**.
+To find approximation of $\beta_0, \beta_1$ we resort to a technique called gradient descent. Assume a function $F(\overrightarrow{ x})$ that describes a hyper-surface where $\overrightarrow{ x}$ is a point of vector space. Now, consider $\nabla F(\overrightarrow{ x})$, a gradient of $F(\overrightarrow{ x})$, it gives the direction of fastest growth of $F(\overrightarrow{ x})$. Hence, $-\nabla F(x)$ gives a direction of **fastest descent**.
 
-Therefore, we can define a sequence $\{ \boldmath x_n \}_{n=0}^N$ such that
+Therefore, we can define a sequence $\{ \overrightarrow{ x_n} \}_{n=0}^N$ such that
 
 $$
-\boldmath x_{n+1} = \boldmath x_n - \gamma \nabla F(\boldmath x_n),
+\overrightarrow{ x_{n+1}} = \overrightarrow{ x_n} - \gamma \nabla F(\overrightarrow{ x_n}),
 $$
 
 where $\gamma$ is the step size and $N$ is the maximum number of steps. 
 
 ## Estimating parameters of Logistic regression
 
-Ofcouse, for our purposes we consider $\boldmath \beta = (\beta_0, \beta_1)$ with $Loss (p | Y)$. Then consider a sequence of vectors $\{ \boldmath \beta_n \}_{n=0}^N$ where $N$ is a maximum number of steps and with an intial guess $\boldmath \beta_0$ such that
+Ofcouse, for our purposes we consider $\overrightarrow{ \beta } = (\beta_0, \beta_1)$ with $Loss (p | Y)$. Then consider a sequence of vectors $\{ \overrightarrow{ \beta_n }\}_{n=0}^N$ where $N$ is a maximum number of steps and with an intial guess $\overrightarrow{ \beta_0 }$ such that
 
 $$
-\boldmath \beta_{n+1} = \boldmath \beta_n - \gamma \nabla Loss(p | Y),
+\overrightarrow{ \beta_{n+1}} = \overrightarrow{ \beta_n} - \gamma \nabla Loss(p | Y),
 $$
 where $\gamma$ is a step size. In particular, note that
 
