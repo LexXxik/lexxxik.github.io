@@ -78,7 +78,7 @@ $$
 L(p | Y) = \prod_{i} L(p_i | Y) = \prod_{i} p_i^{y_i} (1-p_i)^{1-y_i}.
 $$
 
-To this end we would have to calculate the derivative of $L(p | Y)$ which would require to apply product rule repeatedly. Hence, it is beneficial to introduce a **log-likelihood** 
+To this end we have to calculate the derivative of $\prod_{i} L(p_i | Y)$ which would require to apply product rule repeatedly. Hence, it is beneficial to introduce a **log-likelihood** 
 
 $$
 l(p | Y) = - \ln (L(p | Y)) = - \sum_{i} \ln(p_i^{y_i} (1-p_i)^{1-y_i}) = - \sum_{i} y_i\ln(p_i) +  (1-y_i)\ln(1-p_i) 
@@ -122,7 +122,7 @@ However, this cannot be rearranged to obtain analytical expression for $\beta_0,
 
 To find approximation of $\beta_0, \beta_1$ we resort to a technique called gradient descent. Assume a function $F(\overrightarrow{ x})$ that describes a hyper-surface where $\overrightarrow{ x}$ is a point of vector space. Now, consider $\nabla F(\overrightarrow{ x})$, a gradient of $F(\overrightarrow{ x})$, it gives the direction of fastest growth of $F(\overrightarrow{ x})$. Hence, $-\nabla F(x)$ gives a direction of **fastest descent**.
 
-Therefore, we can define a sequence $\{ \overrightarrow{ x_n} \}_{n=0}^N$ such that
+Therefore, we can define a sequence $\{ \overrightarrow{x_n} \}_{n=0}^N$ such that
 
 $$
 \overrightarrow{ x_{n+1}} = \overrightarrow{ x_n} - \gamma \nabla F(\overrightarrow{ x_n}),
