@@ -26,7 +26,7 @@ This is a simple **classification problem** with two categories: has Starbucks a
 
 A good attempt to tackle the problem would be to try and predict the **probability** that customer has the app given spent money. In this case the statistical model is required to have values between 0 and 1. In addition, an arbitrry value called **bayesian treshold** must be chosen. If the probability is above the treshold, then the model predicts that the customer has an app. If the probabilty is below the treshold, then customer is predicted not to have an app.
 
-# Logisitc regression
+# Logistic regression
 
 Logistic regression is a two-parameter model for solving classification problem. Assume the probability density function:
 
@@ -101,7 +101,7 @@ $$
 We have 
 
 $$
-\frac{d \;l(p | Y)}{d\; \beta_m} = - \sum_{i} \left( y_i\frac{1}{p_i} +  (1-y_i)\frac{1}{1-p_i}\right)\frac{d \;p_i}{d\; \beta_m}
+\frac{d \;l(p | Y)}{d\; \beta_m} = - \sum_{i} \left( y_i\frac{1}{p_i} -  (1-y_i)\frac{1}{1-p_i}\right)\frac{d \;p_i}{d\; \beta_m}
 $$
 
 and
@@ -113,7 +113,7 @@ $$
 where $x_{i,m} = 1$ if $m=0$ and $x_{i,m} = x_i$ otherwise. Hence, 
 
 $$
-\frac{d \;l(p | Y)}{d\; \beta_m} = - \sum_{i} \left( y_i(1-p_i) +  (1-y_i)p_i\right) x_{i,m} = 0
+\frac{d \;l(p | Y)}{d\; \beta_m} = - \sum_{i} \left( y_i(1-p_i) -  (1-y_i)p_i\right) x_{i,m} = 0
 $$
 
 However, this cannot be rearranged to obtain analytical expression for $\beta_0, \; \beta_1$. Therefore. a numerical algorithm such as gradient descent must be used to find approximate minimum and find estimates for $\beta_0, \; \beta_1$
@@ -122,7 +122,7 @@ However, this cannot be rearranged to obtain analytical expression for $\beta_0,
 
 To find approximation of $\beta_0, \beta_1$ we resort to a technique called gradient descent. Assume a function $F(\overrightarrow{ x})$ that describes a hyper-surface where $\overrightarrow{ x}$ is a point of vector space. Now, consider $\nabla F(\overrightarrow{ x})$, a gradient of $F(\overrightarrow{ x})$, it gives the direction of fastest growth of $F(\overrightarrow{ x})$. Hence, $-\nabla F(x)$ gives a direction of **fastest descent**.
 
-Therefore, we can define a sequence $\left{ \overrightarrow{x_n} \right}_{n=0}^N$ such that
+Therefore, we can define a sequence $\{ \overrightarrow{x_n} \}_{n=0}^N$ such that
 
 $$
 \overrightarrow{ x_{n+1}} = \overrightarrow{ x_n} - \gamma \nabla F(\overrightarrow{ x_n}),
@@ -144,6 +144,10 @@ $$
 $$
 
 Hence, we approximate a location of minimum of the loss function in the vector space of parameters $(\beta_0, \beta_1)$.
+
+## Beyond single predictor
+
+It is easy to introduce additional predictors by adding extra parameters $\beta\text{s}$. All the derivation for loss function holds and can be easily extended for a gneral index $m$. However, this model can still handle only binary classification, i.e. two categories.
 
 # Conclusion
 In this section, I introduced simple classification problem where we predict qualitative variable. I also discussed baye's treshold for making the classification. Then I introduced probability density function of logistic regression with two parameters $\beta_0, \beta_1$. Then I discussed how likelihood function and log-likelihood are linked and their relation to estimating parameters. Finally, I introduced gradient descent as a means to approximate location of the minimum of loss function.
