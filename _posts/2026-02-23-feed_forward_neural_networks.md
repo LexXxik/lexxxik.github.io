@@ -39,7 +39,7 @@ $$
 
 where Einstein's summation convention was employed. Here, $f: \mathbb{R} \to \mathbb{R}$ 
 
-![Figure 1](../blog_images/2026-02-22/neurone.png)
+![Figure 1](../blog_images/2026-02-22/neurone.jpg)
 _Figure 1: Neuron with multiple inputs $x$, output $o$, bias $b$ and activation function $f$._
 
 ## Single Layer
