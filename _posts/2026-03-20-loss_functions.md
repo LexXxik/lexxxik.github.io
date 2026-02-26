@@ -2,7 +2,7 @@
 title: Loss functions
 description: This is a summary article of loss function commonly used for supervised learniong methods.
 author: LexXxik
-date: 2026-02-22 12:00:00 +0000
+date: 2026-03-20 12:00:00 +0000
 categories: [fundamentals]
 tags: [Regression, Classification, Neural Networks]
 pin: false

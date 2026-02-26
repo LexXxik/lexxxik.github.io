@@ -2,7 +2,7 @@
 title: Activation functions
 description: A summary article of activation functions used in neural networks.
 author: LexXxik
-date: 2026-02-22 12:00:00 +0000
+date: 2026-03-14 12:00:00 +0000
 categories: [fundamentals, neural networks]
 tags: [Neural Networks]
 pin: false
