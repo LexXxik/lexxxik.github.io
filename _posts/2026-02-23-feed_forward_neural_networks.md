@@ -40,14 +40,14 @@ $$
 
 where Einstein's summation convention is employed. Here, $f: \mathbb{R} \to \mathbb{R}$.
 
-![Figure 1](../blog_images/2026-02-22/neurone.jpg)
+![Figure 1](../blog_images/2026-02-23/neurone.jpg)
 _Figure 1: Neuron with multiple inputs $x$, output $o$, bias $b$, and activation function $f$._
 
 ## Single Layer (width n, depth 1)
 
 In order to produce multiple outputs, we must add multiple neurons in parallel (Figure 2).
 
-![Figure 2](../blog_images/2026-02-22/single_layer.png)
+![Figure 2](../blog_images/2026-02-23/single_layer.png)
 _Figure 2: Single layer of neurons with inputs $x$, multiple outputs $o$, bias $b$, and activation function $f$._
 
 The only difference in mathematical formulation from the single-neuron case is the addition of an extra index accounting for each neuron. Hence, the set of weights can be organized into a matrix with entries $w_{\alpha i}$ for $i \in \{1, \dots, m\}$ and $\alpha \in \{1, \dots, n\}$. The generalized formulation becomes:
@@ -62,7 +62,7 @@ where $f$ is applied element-wise for each index $\alpha$.
 
 Lastly, neural networks often consist of multiple layers, not just one. In this section, we illustrate how two layers of neurons may be connected (Figure 3).
 
-![Figure 3](../blog_images/2026-02-22/multi_layer.png)
+![Figure 3](../blog_images/2026-02-23/multi_layer.png)
 _Figure 3: Multiple layers of neurons with inputs $x$, multiple outputs $o$, bias $b$, and activation function $f$._
 
 Assuming that the first layer takes inputs $x_1, \dots, x_m$ and that there are $p$ neurons in the second layer, the first layer can be described as a function $F_1: \mathbb{R}^m \to \mathbb{R}^p, \; x \mapsto o$.
