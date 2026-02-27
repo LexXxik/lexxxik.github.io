@@ -2,7 +2,7 @@
 title: Feed Forward Neural Networks
 description: A mathematical description of the feedforward neural network is provided in this article.
 author: LexXxik
-date: 2026-02-22 12:00:00 +0000
+date: 2026-02-23 12:00:00 +0000
 categories: [fundamentals, neural networks]
 tags: [Neural Networks]
 pin: false
